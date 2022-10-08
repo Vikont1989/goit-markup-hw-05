@@ -63,7 +63,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button type="button" class="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!--Ключові можливості та стратегія фірми-->
@@ -490,5 +490,32 @@
             </div>
         </div>    
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="close-modal" data-modal-close>
+                <svg width="11" height="11">
+                  <use  href="./images/icon/sprite.svg#icon-vector-x">
+
+                  </use>
+                </svg>
+              </button>
+            </div>
+          </div>
+    <script src="./js/modal.js">
+      (() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-modal-open]"),
+    closeModalBtn: document.querySelector("[data-modal-close]"),
+    modal: document.querySelector("[data-modal]"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
+    </script>
   </body>
 </html>
