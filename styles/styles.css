@@ -121,7 +121,13 @@ img {
   bottom: 0;
   border-radius: 2px;
   outline: 2px solid currentColor;
-  position: absolute;  
+  position: absolute; 
+  transform: scaleX(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item:hover::after {
+  transform: scaleX(0);
 }
 
 .item:hover,
@@ -368,7 +374,6 @@ img {
 }
 
 .text-work { 
-  outline: 2px solid orange;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -654,21 +659,29 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.items-shadow:hover .product-text-action,
+.items-shadow:focus .product-text-action {
+  transform: translate(0);
+}
+
 .product {
   position: relative;
+  overflow: hidden;
 }
 
 .product-text-action {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;
+  padding: 61px 24px;
   height: 100%;
+  width: 100%;
+  transition: transform 250ms cubic-bezier(0.1, 0, 0.2, 1);
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
-  transition: 250ms;
- 
+ transform: translateY(100%);
 }
+
 
 .description-text {
   display: block;
@@ -678,12 +691,14 @@ line-height: 28px;
 color: var(--background-color);
 /* or 156% */
 
-padding-top: 63px;
-padding-left: 24px;
 }
 
 .items-porfolio:hover .product-text-action {
  opacity: 1;
+}
+
+.ptoduct:hover.product-text-action {
+  transform: translateY(0);
 }
 
 
