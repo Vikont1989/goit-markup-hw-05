@@ -30,7 +30,7 @@ body {
   background-color: #fff;
   letter-spacing: 0.03em;
   font-style: normal;
-  color: var(--primart-text-color);
+  
   font-size: 14px;
   padding-top: 80px;
 }
@@ -112,6 +112,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
    position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item.current::after {
@@ -144,7 +145,7 @@ img {
   color: var(--title-text-color);
   text-decoration: none;
   padding: 32px 0;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icon {
@@ -154,10 +155,6 @@ img {
 
 .contacts:hover,
 .contacts:focus {
-  color: var(--accent-color);
-}
-
-.contacts:hover {
   color: var(--accent-color);
 }
 
@@ -372,29 +369,22 @@ img {
 
 .product-work {
   position: relative;
-  cursor: pointer;
 }
 
-.text-work { 
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width:100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(47, 48, 58,80%);
-}
 
 .eclipse-text {
 font-weight: 700;
 line-height: 1.14;
-text-align: center;
-letter-spacing: 0.03em;
 text-transform: uppercase;
-
 color: var(--background-color);
+position: absolute;
+bottom: 0;
+width:100%;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(47, 48, 58,80%);
 }
 
 /* наша команда */
@@ -451,8 +441,7 @@ color: var(--background-color);
   background-color: rgba(255, 255, 255, 0.1);
   justify-content:center;
   align-items:center;
-  transition: transform 1550ms cubic-bezier(0.1, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .teame-social-icon {
@@ -504,7 +493,7 @@ color: var(--background-color);
   justify-content: center;
   align-items:center;
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .firm-social-icon {
@@ -549,7 +538,7 @@ color: var(--background-color);
   color: var(--background-color);
   display: inline block;
   padding-left: 0px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact {
   font-weight: 400;
@@ -559,7 +548,7 @@ color: var(--background-color);
   text-decoration: none;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adres:hover,
@@ -588,10 +577,7 @@ color: var(--background-color);
 }
 
 .container-icon {
- 
   margin-top: 12px;
-  
- 
 }
 
 .social-footer {
@@ -614,7 +600,7 @@ margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   justify-content:center;
   align-items:center;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .teame-social-icon {
@@ -642,19 +628,15 @@ margin-bottom: 20px;
   border: none;
   cursor: pointer;
   padding: 6px 22px;
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-color);
   color: var(--background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn:hover,
-.btn:focus{
-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
- transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* оформлення галереї прикладів робіт */
 
@@ -662,6 +644,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
  display: block;
  text-decoration: none;
  color:var(--primart-text-color);
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 
 .items-shadow:hover,
@@ -673,6 +656,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .items-shadow:hover .product-text-action,
 .items-shadow:focus .product-text-action {
   transform: translate(0);
+  opacity: 1;
 }
 
 .product {
@@ -687,10 +671,10 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
   padding: 61px 24px;
   height: 100%;
   width: 100%;
-  transition: transform 250ms cubic-bezier(0.1, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.1, 0, 0.2, 1), opacity 250ms cubic-bezier(0.1, 0, 0.2, 1);
   background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
- transform: translateY(100%);
+   opacity: 0; 
+ transform: translateY(100%); 
 }
 
 
@@ -767,6 +751,8 @@ color: var(--background-color);
   height: 100%;
   background-color: rgb(0, 0, 0, 0.2);
    z-index: 2;
+   opacity: 1;
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
